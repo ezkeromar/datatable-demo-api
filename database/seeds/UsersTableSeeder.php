@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Database\Eloquent\Factory;
 use Illuminate\Support\Str;
+use \App\User;
 
 class UsersTableSeeder extends Seeder
 {
@@ -239,7 +239,7 @@ class UsersTableSeeder extends Seeder
           ]
         ];
         for ($i=0; $i < count($faker) - 1; $i++) {
-            factory(\App\User::class)->create([
+            User::create([
                 'firstname' => $faker[$i]['firstname'],
                 'lastname' => $faker[$i]['lastname'],
                 'city' => $faker[$i]['city'],
